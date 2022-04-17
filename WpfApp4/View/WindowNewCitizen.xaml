@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp4.View.WindowNewCitizen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4.View"
+        mc:Ignorable="d"
+        Title="WindowNewCitizen" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Код:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Личность:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Документ:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Имя:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Отчество:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Фамилия:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbId" Grid.Row="0" Grid.Column="1" Text="{Binding ID}" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" IsEnabled="False"/>
+        <TextBox x:Name="TbFirstName" Grid.Row="3" Grid.Column="1" Text="{Binding FirstName}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbSecondName" Grid.Row="4" Grid.Column="1" Text="{Binding SecondName}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <ComboBox x:Name="CbPerson" Grid.Row="1" Grid.Column="1" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" DisplayMemberPath="Shifer"/>
+        <ComboBox x:Name="CbDocument" Grid.Row="2" Grid.Column="1" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" DisplayMemberPath="Seriy"/>
+        <TextBox x:Name="TbLastName" Grid.Row="5" Grid.Column="1" Text="{Binding LastName}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+            <Button x:Name="BtSave" Content="Сохранить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,10,10,5" Click="BtSave_Click"/>
+            <Button x:Name="BtCansel" Content="Отменить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,10,10,5" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
